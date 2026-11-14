@@ -1,0 +1,19 @@
+{
+  "name": "ecru-studio-qa-automation",
+  "version": "1.0.0",
+  "description": "Playwright + TypeScript end-to-end and API test suite for the ÉCRU Studio practice e-commerce site",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:stable": "playwright test --grep-invert @known-bug",
+    "test:bugs": "playwright test --grep @known-bug",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}
